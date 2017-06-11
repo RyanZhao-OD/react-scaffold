@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist/static'),
-        filename: '[name].bundle.[hash:6].js'
+        filename: '[name].bundle.[chunkhash:6].js'
     },
     module: {
         rules: [
@@ -44,14 +44,25 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/tpl/page1.html'),
             filename: path.resolve('dist/html/page1.html'),
-            chunks: ['page1']
+            chunks: ['page1'],
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            }
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/tpl/page2.html'),
             filename: path.resolve('dist/html/page2.html'),
-            chunks: ['page2']
+            chunks: ['page2'],
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            }
         })
-
-
-    ]
+    ],
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        inline: true,
+        port: 8090
+    }
 };

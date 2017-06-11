@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "rm -rf ./dist && webpack --config webpack.config.js --display-modules --colors",
+    "server": "webpack-dev-server --inline"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,8 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "jquery": "^3.2.1",
@@ -38,4 +40,3 @@
     "react-dom": "^15.5.4"
   }
 }
-

@@ -8,3 +8,9 @@
 ```
 npm run build
 ```
+
+## TODO
+
+- output publicPath
+- devServer
+- html-webpack-inline-source-plugin
