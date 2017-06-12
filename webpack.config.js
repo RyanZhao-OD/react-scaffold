@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|es)$/,
                 loader: 'babel-loader',
                 include: path.resolve(__dirname, 'src'),
                 exclude: /(node_modules|bower_components)/
@@ -29,6 +29,10 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             options: { sourceMap: true, importLoaders: 1 }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: { sourceMap: true }
                         },
                         {
                             loader: 'less-loader',
