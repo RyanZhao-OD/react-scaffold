@@ -1,18 +1,31 @@
 import './style/reset.css';
 
-import React from "react";
+import React, {Component} from "react";
 import {render} from "react-dom";
 
 import $ from 'jquery';
 import log from './lib/lib.js';
 import Header from './components/Header/Header.js';
+import RefStringHtml from './components/Ref/RefStringHtml.jsx';
 
 
-function component () {
-    log($);
-    log($('.div1'));
-    log($('.div1').html());
+// ref demo
+class App extends Component {
+    render(){
+        return (
+            <div>
+                <Header ref="headerref" />
+                <RefStringHtml />
+            </div>
+
+        );
+    }
+
+    componentDidMount() {
+        console.log(this.refs);
+
+    }
 }
-component();
 
-render(<Header />, document.getElementById("app"));
+
+render(<App />, document.getElementById("app"));

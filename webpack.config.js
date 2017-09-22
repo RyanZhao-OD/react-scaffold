@@ -47,7 +47,7 @@ module.exports = {
         new ExtractTextWebpackPlugin('[name].bundle.[contenthash:6].css'),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/tpl/page1.html'),
-            filename: path.resolve('dist/html/page1.html'),
+            filename: path.resolve('dist/html/page.html'),
             chunks: ['page1'],
             minify: {
                 collapseWhitespace: true,
