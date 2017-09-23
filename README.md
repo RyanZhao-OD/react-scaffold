@@ -14,3 +14,6 @@ npm run build
 - output publicPath
 - devServer
 - html-webpack-inline-source-plugin
+
+## 生命周期
+![profile](resource/life-cycle.jpg)

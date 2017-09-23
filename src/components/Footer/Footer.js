@@ -1,7 +1,7 @@
 import './Footer.css';
 
 class Footer {
-    constructor () {
+    constructor() {
         console.log('footer');
     }
 

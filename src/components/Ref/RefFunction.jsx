@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class RefFunction extends Component {
+export default class RefFunction extends Component {
     render() {
         return (
             <div ref={compInstance => {
@@ -17,5 +17,3 @@ class RefFunction extends Component {
         console.log(this.refs);     // {}
     }
 }
-
-export default RefFunction;

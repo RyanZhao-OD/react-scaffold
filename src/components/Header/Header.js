@@ -1,8 +1,8 @@
+import React, {Component} from "react";
 import './Header.less';
 
-import React, {Component} from "react";
-class Header extends Component {
-    render(){
+export default class Header extends Component {
+    render() {
         return (
             <div className="header">
                 <h1> 我是header </h1>
@@ -10,7 +10,4 @@ class Header extends Component {
             </div>
         );
     }
-
 }
-
-export default Header;

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import RefStringComponent from './RefStringComponent.jsx';
 import RefFunction from './RefFunction.jsx';
 
-class RefStringHtml extends Component {
+export default class RefStringHtml extends Component {
     render() {
 
         return (
@@ -25,5 +25,3 @@ class RefStringHtml extends Component {
 
     }
 }
-
-export default RefStringHtml;
